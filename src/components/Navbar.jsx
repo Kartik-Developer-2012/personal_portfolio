@@ -30,7 +30,7 @@ export default function Navbar() {
         <>
             <header
                 className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${scrolled
-                    ? 'bg-[#0B0B0F]/90 backdrop-blur-xl border-b border-white/5 shadow-2xl shadow-black/30'
+                    ? 'bg-white/95 backdrop-blur-xl border-b border-black/8 shadow-lg shadow-black/8'
                     : 'bg-transparent'
                     }`}
                 role="banner"
@@ -46,10 +46,10 @@ export default function Navbar() {
                         aria-label="Kartik Modi - Flutter Developer"
                     >
                         <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-shadow duration-300">
-                            <Zap size={17} className="text-white" strokeWidth={2.5} />
+                            <Zap size={17} className="text-gray-900" strokeWidth={2.5} />
                         </div>
                         <span
-                            className="font-bold text-white tracking-tight leading-none"
+                            className="font-bold text-gray-900 tracking-tight leading-none"
                             style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.1rem' }}
                         >
                             Kartik<span className="gradient-text">Modi</span>
@@ -84,7 +84,7 @@ export default function Navbar() {
 
                     {/* Mobile hamburger */}
                     <button
-                        className="md:hidden w-10 h-10 rounded-xl glass-card flex items-center justify-center text-white/80 hover:text-white transition-colors"
+                        className="md:hidden w-10 h-10 rounded-xl glass-card flex items-center justify-center text-black/80 hover:text-black transition-colors"
                         onClick={() => setMenuOpen((v) => !v)}
                         aria-label={menuOpen ? 'Close menu' : 'Open menu'}
                         aria-expanded={menuOpen}
@@ -98,13 +98,13 @@ export default function Navbar() {
                     className={`md:hidden transition-all duration-300 overflow-hidden ${menuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                         }`}
                 >
-                    <div className="bg-[#0B0B0F]/95 backdrop-blur-xl border-b border-white/5 px-5 pb-6 pt-2">
+                    <div className="bg-white/98 backdrop-blur-xl border-b border-black/8 px-5 pb-6 pt-2">
                         <ul className="flex flex-col gap-1 list-none" role="list">
                             {navLinks.map(({ label, href }) => (
                                 <li key={label}>
                                     <a
                                         href={href}
-                                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-white/60 hover:text-white hover:bg-white/5 transition-all duration-200 font-medium text-sm"
+                                        className="flex items-center gap-3 px-4 py-3 rounded-xl text-black/60 hover:text-black hover:bg-black/5 transition-all duration-200 font-medium text-sm"
                                         onClick={(e) => handleNavClick(e, href)}
                                     >
                                         {label}

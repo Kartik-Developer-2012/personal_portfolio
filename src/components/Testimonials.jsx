@@ -113,12 +113,12 @@ export default function Testimonials() {
                 <div className="text-center mb-14 reveal">
                     <span className="text-indigo-400 text-xs font-semibold tracking-widest uppercase">Social Proof</span>
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-3"
                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
                         Client <span className="gradient-text">Testimonials</span>
                     </h2>
-                    <p className="text-neutral-500 text-base mt-4 max-w-lg mx-auto">
+                    <p className="text-gray-500 text-base mt-4 max-w-lg mx-auto">
                         Don't take my word for it — here's what clients across 10+ countries have to say.
                     </p>
                 </div>
@@ -148,7 +148,7 @@ export default function Testimonials() {
 
                         {/* Quote text */}
                         <blockquote
-                            className="text-white/80 text-lg sm:text-xl leading-relaxed mb-8 relative z-10 break-words"
+                            className="text-black/80 text-lg sm:text-xl leading-relaxed mb-8 relative z-10 break-words"
                             style={{ fontStyle: 'italic' }}
                         >
                             "{active.text}"
@@ -157,7 +157,7 @@ export default function Testimonials() {
                         {/* Author */}
                         <div className="flex items-center gap-4">
                             <div
-                                className="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-bold text-sm shrink-0"
+                                className="w-12 h-12 rounded-2xl flex items-center justify-center text-gray-900 font-bold text-sm shrink-0"
                                 style={{
                                     background: `linear-gradient(135deg, ${active.accentColor}60, ${active.accentColor}30)`,
                                     border: `1px solid ${active.accentColor}40`,
@@ -167,8 +167,8 @@ export default function Testimonials() {
                                 {active.avatar}
                             </div>
                             <div>
-                                <div className="text-white font-bold text-base">{active.name}</div>
-                                <div className="text-neutral-500 text-sm">{active.role}</div>
+                                <div className="text-gray-900 font-bold text-base">{active.name}</div>
+                                <div className="text-gray-500 text-sm">{active.role}</div>
                             </div>
                             <div className="ml-auto text-xl" aria-label={`Client from ${active.country}`}>
                                 {active.country}
@@ -180,7 +180,7 @@ export default function Testimonials() {
                 {/* Controls */}
                 <div className="flex items-center justify-center gap-4 mb-8 reveal">
                     <button
-                        className="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-white/60 hover:text-white transition-colors"
+                        className="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-black/60 hover:text-black transition-colors"
                         onClick={() => goTo(current - 1)}
                         aria-label="Previous testimonial"
                     >
@@ -197,7 +197,7 @@ export default function Testimonials() {
                                 style={{
                                     width: i === current ? 24 : 8,
                                     height: 8,
-                                    background: i === current ? active.accentColor : 'rgba(255,255,255,0.15)',
+                                    background: i === current ? active.accentColor : 'rgba(0,0,0,0.15)',
                                 }}
                                 aria-label={`Go to testimonial ${i + 1}`}
                             />
@@ -205,7 +205,7 @@ export default function Testimonials() {
                     </div>
 
                     <button
-                        className="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-white/60 hover:text-white transition-colors"
+                        className="w-10 h-10 rounded-xl glass-card flex items-center justify-center text-black/60 hover:text-black transition-colors"
                         onClick={() => goTo(current + 1)}
                         aria-label="Next testimonial"
                     >
@@ -223,12 +223,12 @@ export default function Testimonials() {
                     ].map(({ value, label }) => (
                         <div key={label} className="glass-card rounded-2xl p-4 text-center">
                             <div
-                                className="text-2xl font-extrabold text-white mb-1"
+                                className="text-2xl font-extrabold text-gray-900 mb-1"
                                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                             >
                                 {value}
                             </div>
-                            <div className="text-neutral-500 text-xs">{label}</div>
+                            <div className="text-gray-500 text-xs">{label}</div>
                         </div>
                     ))}
                 </div>

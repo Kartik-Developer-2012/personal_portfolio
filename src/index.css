@@ -5,7 +5,7 @@
   --font-family-sans: 'Inter', system-ui, sans-serif;
   --font-family-display: 'Space Grotesk', sans-serif;
 
-  --color-bg: #0B0B0F;
+  --color-bg: #FFFFFF;
   --color-accent: #6366f1;
   --color-accent-secondary: #8b5cf6;
   --color-accent-light: #a78bfa;
@@ -34,8 +34,8 @@ html {
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
-  background-color: #0B0B0F;
-  color: rgba(255, 255, 255, 0.87);
+  background-color: #FFFFFF;
+  color: #111827;
   min-height: 100vh;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -56,7 +56,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0B0B0F;
+  background: #f3f4f6;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -297,8 +297,9 @@ body {
 
 /* ─── Glass Morphism ─────────────────────────────────────────────── */
 .glass-card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 }
@@ -308,8 +309,8 @@ body {
 }
 
 .glass-card-hover:hover {
-  background: rgba(99, 102, 241, 0.08);
-  border-color: rgba(99, 102, 241, 0.25);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(99, 102, 241, 0.15);
   transform: translateY(-4px);
   box-shadow: 0 20px 60px rgba(99, 102, 241, 0.12);
 }
@@ -343,11 +344,11 @@ body {
   align-items: center;
   padding: 5px 14px;
   border-radius: 9999px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.09);
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   font-size: 0.78rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.65);
+  color: #4b5563;
   transition: all 0.25s ease;
   white-space: nowrap;
 }
@@ -388,13 +389,13 @@ body {
   align-items: center;
   gap: 8px;
   padding: 12px 26px;
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(0, 0, 0, 0.03);
   border-radius: 12px;
   font-weight: 600;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.85);
+  color: #374151;
   transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.10);
   cursor: pointer;
   text-decoration: none;
   font-family: inherit;
@@ -402,9 +403,9 @@ body {
 
 .btn-secondary:hover {
   transform: translateY(-2px);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(99, 102, 241, 0.4);
-  color: white;
+  background: rgba(0, 0, 0, 0.06);
+  border-color: rgba(99, 102, 241, 0.3);
+  color: #111827;
   box-shadow: 0 8px 28px rgba(99, 102, 241, 0.12);
 }
 
@@ -481,7 +482,7 @@ body {
   position: relative;
   font-size: 0.875rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.55);
+  color: #6b7280;
   text-decoration: none;
   transition: color 0.25s ease;
   padding: 4px 0;

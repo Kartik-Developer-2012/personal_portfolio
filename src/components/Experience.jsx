@@ -75,7 +75,7 @@ export default function Experience() {
                 <div className="text-center mb-16 reveal">
                     <span className="text-indigo-400 text-xs font-semibold tracking-widest uppercase">Career Journey</span>
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-3"
                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
                         Work <span className="gradient-text">Experience</span>
@@ -108,7 +108,7 @@ export default function Experience() {
                                     <div
                                         className="hidden md:flex relative z-10 w-10 h-10 shrink-0 rounded-full items-center justify-center border-2 order-1 md:order-none"
                                         style={{
-                                            background: `radial-gradient(circle, ${exp.color}30, #0B0B0F)`,
+                                            background: `radial-gradient(circle, ${exp.color}30, #ffffff)`,
                                             borderColor: exp.color,
                                             boxShadow: `0 0 16px ${exp.color}40`,
                                         }}
@@ -155,14 +155,14 @@ function ExperienceCard({ exp, align }) {
             </div>
 
             <h3
-                className="text-white font-bold text-lg mb-1 break-words"
+                className="text-gray-900 font-bold text-lg mb-1 break-words"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
                 {exp.role}
             </h3>
-            <div className="text-neutral-400 font-medium text-sm mb-1">{exp.company}</div>
+            <div className="text-gray-600 font-medium text-sm mb-1">{exp.company}</div>
 
-            <div className={`flex items-center gap-1.5 text-neutral-500 text-xs mb-4 ${align === 'right' ? 'justify-end' : ''}`}>
+            <div className={`flex items-center gap-1.5 text-gray-500 text-xs mb-4 ${align === 'right' ? 'justify-end' : ''}`}>
                 <MapPin size={11} />
                 <span className="break-words">{exp.location}</span>
                 <span className="text-neutral-700">•</span>
@@ -174,7 +174,7 @@ function ExperienceCard({ exp, align }) {
                 </span>
             </div>
 
-            <p className="text-neutral-400 text-sm leading-relaxed mb-4 break-words">{exp.description}</p>
+            <p className="text-gray-600 text-sm leading-relaxed mb-4 break-words">{exp.description}</p>
 
             {/* Tech tags */}
             <div className={`flex flex-wrap gap-1.5 ${align === 'right' ? 'justify-end' : ''}`}>

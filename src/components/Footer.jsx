@@ -44,7 +44,7 @@ export default function Footer() {
     return (
         <footer
             className="relative overflow-hidden border-t"
-            style={{ borderColor: 'rgba(255,255,255,0.05)' }}
+            style={{ borderColor: 'rgba(0,0,0,0.08)' }}
             role="contentinfo"
         >
             {/* Top gradient line */}
@@ -59,10 +59,10 @@ export default function Footer() {
                     <div className="max-w-xs">
                         <div className="flex items-center gap-2.5 mb-3">
                             <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center">
-                                <Zap size={17} className="text-white" strokeWidth={2.5} />
+                                <Zap size={17} className="text-gray-900" strokeWidth={2.5} />
                             </div>
                             <span
-                                className="font-bold text-white tracking-tight"
+                                className="font-bold text-gray-900 tracking-tight"
                                 style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '1.1rem' }}
                             >
                                 Kartik<span className="gradient-text">Modi</span>
@@ -82,7 +82,7 @@ export default function Footer() {
                                     target={label === 'Call' ? '_self' : '_blank'}
                                     rel="noopener noreferrer"
                                     aria-label={label}
-                                    className="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-neutral-500 hover:text-white transition-all duration-250 hover:-translate-y-0.5"
+                                    className="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-gray-500 hover:text-black transition-all duration-250 hover:-translate-y-0.5"
                                     style={{ transition: 'all 0.25s ease' }}
                                     onMouseEnter={(e) => {
                                         e.currentTarget.style.borderColor = 'rgba(99,102,241,0.4)';
@@ -107,7 +107,7 @@ export default function Footer() {
                                 <li key={label}>
                                     <a
                                         href={href}
-                                        className="text-neutral-500 hover:text-white text-sm transition-colors duration-200"
+                                        className="text-gray-500 hover:text-black text-sm transition-colors duration-200"
                                         onClick={(e) => handleNavClick(e, href)}
                                     >
                                         {label}
@@ -144,7 +144,7 @@ export default function Footer() {
                 {/* Divider */}
                 <div
                     className="my-8 h-px"
-                    style={{ background: 'linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent)' }}
+                    style={{ background: 'linear-gradient(90deg, transparent, rgba(0,0,0,0.08), transparent)' }}
                 />
 
                 {/* Bottom bar */}
@@ -157,7 +157,7 @@ export default function Footer() {
 
                     <button
                         onClick={scrollToTop}
-                        className="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-neutral-500 hover:text-white transition-all duration-250 hover:-translate-y-1 shrink-0"
+                        className="w-9 h-9 rounded-xl glass-card flex items-center justify-center text-gray-500 hover:text-black transition-all duration-250 hover:-translate-y-1 shrink-0"
                         aria-label="Back to top"
                         style={{ transition: 'all 0.25s ease' }}
                     >

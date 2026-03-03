@@ -99,7 +99,7 @@ export default function Hero() {
                                 <span
                                     className="text-3xl sm:text-4xl lg:text-5xl font-extrabold"
                                     style={{
-                                        background: 'linear-gradient(90deg, rgba(255,255,255,0.55), rgba(255,255,255,0.30))',
+                                        background: 'linear-gradient(90deg, rgba(17,24,39,0.7), rgba(55,65,81,0.45))',
                                         WebkitBackgroundClip: 'text',
                                         WebkitTextFillColor: 'transparent',
                                         letterSpacing: '-0.01em',
@@ -120,7 +120,7 @@ export default function Hero() {
                                 <h1
                                     className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight"
                                 >
-                                    <span className="text-white">I am </span>
+                                    <span className="text-gray-900">I am </span>
                                     <span className="gradient-text">Kartik Modi</span>
                                 </h1>
                             </div>
@@ -156,8 +156,8 @@ export default function Hero() {
                         </div>
 
                         {/* Description */}
-                        <p className="text-base sm:text-lg text-neutral-400 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 animate-fade-in-up delay-200">
-                            I craft <span className="text-white/80">pixel-perfect</span>, high-performance Flutter apps
+                        <p className="text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-10 animate-fade-in-up delay-200">
+                            I craft <span className="text-black/80">pixel-perfect</span>, high-performance Flutter apps
                             that scale. From MVPs to enterprise solutions — clean code, beautiful UI, and rock-solid
                             architecture delivered on time.
                         </p>
@@ -179,12 +179,12 @@ export default function Hero() {
                             {stats.map(({ value, label }) => (
                                 <div key={label} className="text-center lg:text-left">
                                     <div
-                                        className="text-2xl sm:text-3xl font-extrabold text-white"
+                                        className="text-2xl sm:text-3xl font-extrabold text-gray-900"
                                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                                     >
                                         {value}
                                     </div>
-                                    <div className="text-xs text-neutral-500 mt-0.5">{label}</div>
+                                    <div className="text-xs text-gray-500 mt-0.5">{label}</div>
                                 </div>
                             ))}
                         </div>
@@ -203,20 +203,20 @@ export default function Hero() {
                             <div
                                 className="w-72 sm:w-80 rounded-2xl overflow-hidden shadow-2xl"
                                 style={{
-                                    background: 'linear-gradient(145deg, #1a1a2e 0%, #16213e 100%)',
-                                    border: '1px solid rgba(255,255,255,0.08)',
-                                    boxShadow: '0 40px 80px rgba(0,0,0,0.6), 0 0 0 1px rgba(99,102,241,0.2)',
+                                    background: 'linear-gradient(145deg, #f8fafc 0%, #e8edf5 100%)',
+                                    border: '1px solid rgba(0,0,0,0.08)',
+                                    boxShadow: '0 40px 80px rgba(0,0,0,0.12), 0 0 0 1px rgba(99,102,241,0.12)',
                                 }}
                             >
                                 {/* Browser bar */}
-                                <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5">
+                                <div className="flex items-center gap-2 px-4 py-3 border-b border-black/5">
                                     <div className="flex gap-1.5">
                                         <div className="w-3 h-3 rounded-full bg-red-500/70" />
                                         <div className="w-3 h-3 rounded-full bg-yellow-500/70" />
                                         <div className="w-3 h-3 rounded-full bg-green-500/70" />
                                     </div>
-                                    <div className="flex-1 h-5 ml-2 rounded-full bg-white/5 border border-white/5 flex items-center px-3">
-                                        <span className="text-white/20 text-[9px] font-mono">flutter.dev/app</span>
+                                    <div className="flex-1 h-5 ml-2 rounded-full bg-black/5 border border-black/5 flex items-center px-3">
+                                        <span className="text-black/20 text-[9px] font-mono">flutter.dev/app</span>
                                     </div>
                                 </div>
 
@@ -225,26 +225,26 @@ export default function Hero() {
                                     {/* Header bar */}
                                     <div className="flex items-center justify-between">
                                         <div className="h-4 w-24 rounded-full bg-indigo-500/30" />
-                                        <div className="h-6 w-6 rounded-full bg-white/10" />
+                                        <div className="h-6 w-6 rounded-full bg-black/10" />
                                     </div>
 
                                     {/* Hero card */}
-                                    <div className="rounded-xl p-3 border border-white/5" style={{ background: 'rgba(99,102,241,0.1)' }}>
+                                    <div className="rounded-xl p-3 border border-black/5" style={{ background: 'rgba(99,102,241,0.1)' }}>
                                         <div className="h-3 w-16 rounded-full bg-indigo-400/50 mb-2" />
-                                        <div className="h-2 w-full rounded-full bg-white/10 mb-1.5" />
-                                        <div className="h-2 w-4/5 rounded-full bg-white/8" />
+                                        <div className="h-2 w-full rounded-full bg-black/10 mb-1.5" />
+                                        <div className="h-2 w-4/5 rounded-full bg-black/8" />
                                         <div className="mt-3 flex gap-2">
                                             <div className="h-7 w-20 rounded-lg bg-indigo-500/60" />
-                                            <div className="h-7 w-16 rounded-lg bg-white/8" />
+                                            <div className="h-7 w-16 rounded-lg bg-black/8" />
                                         </div>
                                     </div>
 
                                     {/* Row of cards */}
                                     <div className="grid grid-cols-2 gap-2">
                                         {[...Array(4)].map((_, i) => (
-                                            <div key={i} className="h-12 rounded-lg bg-white/5 border border-white/5 p-2">
+                                            <div key={i} className="h-12 rounded-lg bg-black/5 border border-black/5 p-2">
                                                 <div className="w-5 h-5 rounded-md mb-1" style={{ background: ['rgba(99,102,241,0.4)', 'rgba(139,92,246,0.4)', 'rgba(236,72,153,0.4)', 'rgba(34,211,238,0.4)'][i] }} />
-                                                <div className="h-1.5 w-3/4 rounded-full bg-white/10" />
+                                                <div className="h-1.5 w-3/4 rounded-full bg-black/10" />
                                             </div>
                                         ))}
                                     </div>
@@ -252,7 +252,7 @@ export default function Hero() {
                                     {/* Bottom bar */}
                                     <div className="flex justify-around pt-1">
                                         {[...Array(4)].map((_, i) => (
-                                            <div key={i} className={`w-6 h-6 rounded-md ${i === 0 ? 'bg-indigo-500/40' : 'bg-white/5'}`} />
+                                            <div key={i} className={`w-6 h-6 rounded-md ${i === 0 ? 'bg-indigo-500/40' : 'bg-black/5'}`} />
                                         ))}
                                     </div>
                                 </div>
@@ -267,38 +267,38 @@ export default function Hero() {
                             <div
                                 className="w-28 sm:w-36 rounded-[20px] overflow-hidden shadow-2xl"
                                 style={{
-                                    background: 'linear-gradient(145deg, #1a1a2e 0%, #16213e 100%)',
-                                    border: '1px solid rgba(255,255,255,0.1)',
-                                    boxShadow: '0 20px 60px rgba(0,0,0,0.7), 0 0 0 1px rgba(139,92,246,0.25)',
+                                    background: 'linear-gradient(145deg, #f8fafc 0%, #e8edf5 100%)',
+                                    border: '1px solid rgba(0,0,0,0.08)',
+                                    boxShadow: '0 20px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(139,92,246,0.12)',
                                     padding: '3px',
                                 }}
                             >
                                 {/* Notch */}
                                 <div className="flex justify-center pt-2 pb-1">
-                                    <div className="w-16 h-4 rounded-full bg-black" />
+                                    <div className="w-16 h-4 rounded-full bg-white" />
                                 </div>
                                 {/* Phone screen content */}
                                 <div className="px-2 pb-3 space-y-2">
                                     <div className="h-20 rounded-xl overflow-hidden" style={{ background: 'linear-gradient(135deg, rgba(99,102,241,0.3), rgba(139,92,246,0.3))' }}>
                                         <div className="p-2">
-                                            <div className="h-2 w-10 rounded-full bg-white/50 mb-1" />
-                                            <div className="h-1.5 w-14 rounded-full bg-white/20 mb-3" />
-                                            <div className="h-5 w-12 rounded-lg bg-white/20" />
+                                            <div className="h-2 w-10 rounded-full bg-black/50 mb-1" />
+                                            <div className="h-1.5 w-14 rounded-full bg-black/20 mb-3" />
+                                            <div className="h-5 w-12 rounded-lg bg-black/20" />
                                         </div>
                                     </div>
                                     {[...Array(3)].map((_, i) => (
-                                        <div key={i} className="h-8 rounded-lg bg-white/5 flex items-center px-2 gap-2">
+                                        <div key={i} className="h-8 rounded-lg bg-black/5 flex items-center px-2 gap-2">
                                             <div className="w-4 h-4 rounded-md bg-indigo-500/40 shrink-0" />
                                             <div className="flex-1 space-y-1">
-                                                <div className="h-1.5 rounded-full bg-white/20 w-full" />
-                                                <div className="h-1 rounded-full bg-white/10 w-3/4" />
+                                                <div className="h-1.5 rounded-full bg-black/20 w-full" />
+                                                <div className="h-1 rounded-full bg-black/10 w-3/4" />
                                             </div>
                                         </div>
                                     ))}
                                 </div>
                                 {/* Home bar */}
                                 <div className="flex justify-center pb-2">
-                                    <div className="w-12 h-1 rounded-full bg-white/20" />
+                                    <div className="w-12 h-1 rounded-full bg-black/20" />
                                 </div>
                             </div>
                         </div>
@@ -312,8 +312,8 @@ export default function Hero() {
                                 <Star size={12} className="text-emerald-400" />
                             </div>
                             <div>
-                                <div className="text-white text-[10px] font-bold">Top Rated</div>
-                                <div className="text-white/40 text-[8px]">Upwork</div>
+                                <div className="text-gray-900 text-[10px] font-bold">Top Rated</div>
+                                <div className="text-black/40 text-[8px]">Upwork</div>
                             </div>
                         </div>
 
@@ -321,15 +321,15 @@ export default function Hero() {
                             className="absolute bottom-12 sm:bottom-20 -right-2 sm:-right-6 z-30 glass-card rounded-xl px-3 py-2 animate-float"
                             style={{ animationDelay: '1.5s' }}
                         >
-                            <div className="text-white text-[10px] font-bold">Clean Architecture</div>
+                            <div className="text-gray-900 text-[10px] font-bold">Clean Architecture</div>
                             <div className="flex items-center gap-1 mt-1">
                                 {['F', 'R', 'D'].map((l, i) => (
-                                    <div key={i} className="w-5 h-5 rounded-full flex items-center justify-center text-[8px] font-bold text-white"
+                                    <div key={i} className="w-5 h-5 rounded-full flex items-center justify-center text-[8px] font-bold text-gray-900"
                                         style={{ background: ['#6366f1', '#8b5cf6', '#a78bfa'][i] }}>
                                         {l}
                                     </div>
                                 ))}
-                                <span className="text-white/40 text-[8px] ml-1">+more</span>
+                                <span className="text-black/40 text-[8px] ml-1">+more</span>
                             </div>
                         </div>
                     </div>
@@ -339,7 +339,7 @@ export default function Hero() {
             {/* Scroll indicator */}
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce opacity-40">
                 <div className="w-px h-12 bg-gradient-to-b from-transparent via-indigo-400 to-transparent" />
-                <span className="text-[10px] text-white/40 tracking-widest uppercase">Scroll</span>
+                <span className="text-[10px] text-black/40 tracking-widest uppercase">Scroll</span>
             </div>
         </section>
     );

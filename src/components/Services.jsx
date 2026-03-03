@@ -79,12 +79,12 @@ export default function Services() {
                 <div className="text-center mb-16 reveal">
                     <span className="text-indigo-400 text-xs font-semibold tracking-widest uppercase">What I Offer</span>
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-3"
                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
                         My <span className="gradient-text">Services</span>
                     </h2>
-                    <p className="text-neutral-500 text-base mt-4 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-gray-500 text-base mt-4 max-w-xl mx-auto leading-relaxed">
                         End-to-end Flutter development — from concept to App Store launch and beyond.
                     </p>
                 </div>
@@ -122,12 +122,12 @@ export default function Services() {
 
                             {/* Content */}
                             <h3
-                                className="text-white font-bold text-lg mb-3 break-words"
+                                className="text-gray-900 font-bold text-lg mb-3 break-words"
                                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                             >
                                 {title}
                             </h3>
-                            <p className="text-neutral-500 text-sm leading-relaxed mb-5 break-words">{description}</p>
+                            <p className="text-gray-500 text-sm leading-relaxed mb-5 break-words">{description}</p>
 
                             {/* Tags */}
                             <div className="flex flex-wrap gap-1.5">

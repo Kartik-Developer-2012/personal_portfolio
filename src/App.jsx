@@ -13,7 +13,7 @@ import CursorGlow from './components/CursorGlow';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#0B0B0F] overflow-x-hidden">
+    <div className="min-h-screen bg-white overflow-x-hidden">
       {/* Futuristic ambient effects — always behind content */}
       <ParticleBackground />
       <CursorGlow />

@@ -75,12 +75,12 @@ export default function TechStack() {
                 <div className="text-center mb-16 reveal">
                     <span className="text-indigo-400 text-xs font-semibold tracking-widest uppercase">My Arsenal</span>
                     <h2
-                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mt-3"
+                        className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mt-3"
                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
                         Tech <span className="gradient-text">Stack</span>
                     </h2>
-                    <p className="text-neutral-500 text-base mt-4 max-w-lg mx-auto">
+                    <p className="text-gray-500 text-base mt-4 max-w-lg mx-auto">
                         A carefully curated toolkit built for building production-grade Flutter applications.
                     </p>
                 </div>
@@ -89,11 +89,11 @@ export default function TechStack() {
                     {techCategories.map(({ label, items }) => (
                         <div key={label} className="reveal">
                             <div className="flex items-center gap-3 mb-5">
-                                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-white/5" />
-                                <span className="text-neutral-500 text-xs font-semibold tracking-widest uppercase px-2">
+                                <div className="h-px flex-1 bg-gradient-to-r from-transparent to-black/10" />
+                                <span className="text-gray-500 text-xs font-semibold tracking-widest uppercase px-2">
                                     {label}
                                 </span>
-                                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-white/5" />
+                                <div className="h-px flex-1 bg-gradient-to-l from-transparent to-black/10" />
                             </div>
                             <div className="flex flex-wrap justify-center gap-4">
                                 {items.map(({ name, icon, color }) => (
@@ -123,7 +123,7 @@ export default function TechStack() {
                                         >
                                             {icon}
                                         </div>
-                                        <span className="text-white/70 text-xs font-medium text-center leading-tight break-words max-w-[80px] text-wrap">
+                                        <span className="text-black/70 text-xs font-medium text-center leading-tight break-words max-w-[80px] text-wrap">
                                             {name}
                                         </span>
                                     </div>

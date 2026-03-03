@@ -101,8 +101,8 @@ export default function Contact() {
     };
 
     const inputStyle = {
-        background: 'rgba(255,255,255,0.04)',
-        border: '1px solid rgba(255,255,255,0.09)',
+        background: 'rgba(0,0,0,0.03)',
+        border: '1px solid rgba(0,0,0,0.09)',
     };
 
     const focusStyle = (e) => {
@@ -111,7 +111,7 @@ export default function Contact() {
     };
 
     const blurStyle = (e) => {
-        e.target.style.borderColor = 'rgba(255,255,255,0.09)';
+        e.target.style.borderColor = 'rgba(0,0,0,0.09)';
         e.target.style.boxShadow = 'none';
     };
 
@@ -125,14 +125,14 @@ export default function Contact() {
                 <div className="text-center mb-16 reveal">
                     <span className="text-indigo-400 text-xs font-semibold tracking-widest uppercase">Let's Collaborate</span>
                     <h2
-                        className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white mt-3 leading-tight break-words"
+                        className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-gray-900 mt-3 leading-tight break-words"
                         style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                     >
                         Let's Build Your
                         <br />
                         <span className="gradient-text">Next Flutter App</span>
                     </h2>
-                    <p className="text-neutral-500 text-base mt-5 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-gray-500 text-base mt-5 max-w-xl mx-auto leading-relaxed">
                         Whether you have a full spec ready or just a rough idea — I'd love to hear what you're building.
                         Let's turn it into a product users love.
                     </p>
@@ -143,7 +143,7 @@ export default function Contact() {
                     <div className="reveal">
                         <div className="glass-card rounded-2xl p-6 sm:p-8">
                             <h3
-                                className="text-white font-bold text-xl mb-6"
+                                className="text-gray-900 font-bold text-xl mb-6"
                                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                             >
                                 Send a Message
@@ -154,14 +154,14 @@ export default function Contact() {
                                     <div className="w-16 h-16 rounded-full bg-emerald-500/15 flex items-center justify-center mb-4 border border-emerald-500/25">
                                         <CheckCircle2 size={28} className="text-emerald-400" />
                                     </div>
-                                    <div className="text-white font-bold text-lg mb-2">Message Sent! 🚀</div>
-                                    <div className="text-neutral-400 text-sm">I'll get back to you within 24 hours.</div>
+                                    <div className="text-gray-900 font-bold text-lg mb-2">Message Sent! 🚀</div>
+                                    <div className="text-gray-600 text-sm">I'll get back to you within 24 hours.</div>
                                 </div>
                             ) : (
                                 <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                         <div>
-                                            <label htmlFor="contact-name" className="block text-neutral-400 text-xs font-medium mb-2 uppercase tracking-wide">
+                                            <label htmlFor="contact-name" className="block text-gray-600 text-xs font-medium mb-2 uppercase tracking-wide">
                                                 Name
                                             </label>
                                             <input
@@ -172,14 +172,14 @@ export default function Contact() {
                                                 placeholder="John Doe"
                                                 value={formState.name}
                                                 onChange={handleChange}
-                                                className="w-full px-4 py-3 rounded-xl text-white placeholder-neutral-600 text-sm outline-none transition-all duration-250"
+                                                className="w-full px-4 py-3 rounded-xl text-gray-900 placeholder-neutral-600 text-sm outline-none transition-all duration-250"
                                                 style={inputStyle}
                                                 onFocus={focusStyle}
                                                 onBlur={blurStyle}
                                             />
                                         </div>
                                         <div>
-                                            <label htmlFor="contact-email" className="block text-neutral-400 text-xs font-medium mb-2 uppercase tracking-wide">
+                                            <label htmlFor="contact-email" className="block text-gray-600 text-xs font-medium mb-2 uppercase tracking-wide">
                                                 Email
                                             </label>
                                             <input
@@ -190,7 +190,7 @@ export default function Contact() {
                                                 placeholder="john@company.com"
                                                 value={formState.email}
                                                 onChange={handleChange}
-                                                className="w-full px-4 py-3 rounded-xl text-white placeholder-neutral-600 text-sm outline-none transition-all duration-250"
+                                                className="w-full px-4 py-3 rounded-xl text-gray-900 placeholder-neutral-600 text-sm outline-none transition-all duration-250"
                                                 style={inputStyle}
                                                 onFocus={focusStyle}
                                                 onBlur={blurStyle}
@@ -199,7 +199,7 @@ export default function Contact() {
                                     </div>
 
                                     <div>
-                                        <label htmlFor="contact-budget" className="block text-neutral-400 text-xs font-medium mb-2 uppercase tracking-wide">
+                                        <label htmlFor="contact-budget" className="block text-gray-600 text-xs font-medium mb-2 uppercase tracking-wide">
                                             Budget Range
                                         </label>
                                         <select
@@ -207,25 +207,25 @@ export default function Contact() {
                                             name="budget"
                                             value={formState.budget}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl text-white text-sm outline-none transition-all duration-250 appearance-none cursor-pointer"
+                                            className="w-full px-4 py-3 rounded-xl text-gray-900 text-sm outline-none transition-all duration-250 appearance-none cursor-pointer"
                                             style={{
                                                 ...inputStyle,
-                                                color: formState.budget ? 'white' : 'rgba(255,255,255,0.3)',
+                                                color: formState.budget ? '#111827' : 'rgba(0,0,0,0.35)',
                                             }}
                                             onFocus={focusStyle}
                                             onBlur={blurStyle}
                                         >
-                                            <option value="" style={{ background: '#1a1a2e' }}>Select budget range</option>
-                                            <option value="under5k" style={{ background: '#1a1a2e' }}>Under $5,000</option>
-                                            <option value="5k-15k" style={{ background: '#1a1a2e' }}>$5,000 – $15,000</option>
-                                            <option value="15k-50k" style={{ background: '#1a1a2e' }}>$15,000 – $50,000</option>
-                                            <option value="50k+" style={{ background: '#1a1a2e' }}>$50,000+</option>
-                                            <option value="discuss" style={{ background: '#1a1a2e' }}>Let's discuss</option>
+                                            <option value="" style={{ background: '#ffffff' }}>Select budget range</option>
+                                            <option value="under5k" style={{ background: '#ffffff' }}>Under $5,000</option>
+                                            <option value="5k-15k" style={{ background: '#ffffff' }}>$5,000 – $15,000</option>
+                                            <option value="15k-50k" style={{ background: '#ffffff' }}>$15,000 – $50,000</option>
+                                            <option value="50k+" style={{ background: '#ffffff' }}>$50,000+</option>
+                                            <option value="discuss" style={{ background: '#ffffff' }}>Let's discuss</option>
                                         </select>
                                     </div>
 
                                     <div>
-                                        <label htmlFor="contact-message" className="block text-neutral-400 text-xs font-medium mb-2 uppercase tracking-wide">
+                                        <label htmlFor="contact-message" className="block text-gray-600 text-xs font-medium mb-2 uppercase tracking-wide">
                                             Project Details
                                         </label>
                                         <textarea
@@ -236,7 +236,7 @@ export default function Contact() {
                                             placeholder="Tell me about your project, goals, and timeline..."
                                             value={formState.message}
                                             onChange={handleChange}
-                                            className="w-full px-4 py-3 rounded-xl text-white placeholder-neutral-600 text-sm outline-none resize-none transition-all duration-250"
+                                            className="w-full px-4 py-3 rounded-xl text-gray-900 placeholder-neutral-600 text-sm outline-none resize-none transition-all duration-250"
                                             style={inputStyle}
                                             onFocus={focusStyle}
                                             onBlur={blurStyle}
@@ -260,7 +260,7 @@ export default function Contact() {
                     <div className="space-y-6">
                         <div className="reveal">
                             <h3
-                                className="text-white font-bold text-lg mb-4"
+                                className="text-gray-900 font-bold text-lg mb-4"
                                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                             >
                                 Reach Me Directly
@@ -294,13 +294,13 @@ export default function Contact() {
                                             <Icon size={18} style={{ color: accent }} />
                                         </div>
                                         <div className="flex-1 min-w-0">
-                                            <div className="text-white font-semibold text-sm">{label}</div>
-                                            <div className="text-neutral-500 text-xs truncate">{value}</div>
+                                            <div className="text-gray-900 font-semibold text-sm">{label}</div>
+                                            <div className="text-gray-500 text-xs truncate">{value}</div>
                                             <div className="text-neutral-700 text-[11px]">{desc}</div>
                                         </div>
                                         <ArrowRight
                                             size={15}
-                                            className="text-neutral-600 group-hover:text-white shrink-0 transition-all duration-250 group-hover:translate-x-1"
+                                            className="text-neutral-600 group-hover:text-black shrink-0 transition-all duration-250 group-hover:translate-x-1"
                                         />
                                     </a>
                                 ))}
@@ -310,7 +310,7 @@ export default function Contact() {
                         {/* What I can help with */}
                         <div className="glass-card rounded-2xl p-6 reveal">
                             <h4
-                                className="text-white font-bold text-base mb-4"
+                                className="text-gray-900 font-bold text-base mb-4"
                                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                             >
                                 I Can Help You With
@@ -319,7 +319,7 @@ export default function Contact() {
                                 {offerings.map((item, i) => (
                                     <li
                                         key={item}
-                                        className="flex items-center gap-3 text-sm text-neutral-400 break-words"
+                                        className="flex items-center gap-3 text-sm text-gray-600 break-words"
                                         style={{
                                             animationDelay: `${i * 60}ms`,
                                         }}
