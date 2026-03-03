@@ -4,46 +4,46 @@ const techCategories = [
     {
         label: 'Mobile & Core',
         items: [
-            { name: 'Flutter', icon: '🐦', color: '#54C5F8' },
-            { name: 'Dart', icon: '🎯', color: '#00B4AB' },
-            { name: 'Android', icon: '🤖', color: '#3DDC84' },
-            { name: 'iOS', icon: '🍎', color: '#999999' },
+            { name: 'Flutter', color: '#54C5F8', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+            { name: 'Dart', color: '#00B4AB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
+            { name: 'Android', color: '#3DDC84', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg' },
+            { name: 'iOS', color: '#555555', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apple/apple-original.svg' },
         ],
     },
     {
         label: 'State Management',
         items: [
-            { name: 'BLoC', icon: '🧩', color: '#6366f1' },
-            { name: 'Riverpod', icon: '⚡', color: '#8b5cf6' },
-            { name: 'GetX', icon: '🔥', color: '#f59e0b' },
-            { name: 'Provider', icon: '📦', color: '#10b981' },
+            { name: 'BLoC', color: '#6366f1', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg' },
+            { name: 'Riverpod', color: '#8b5cf6', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-original.svg' },
+            { name: 'GetX', color: '#f59e0b', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-plain.svg' },
+            { name: 'Provider', color: '#10b981', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dart/dart-plain.svg' },
         ],
     },
     {
         label: 'Backend & Database',
         items: [
-            { name: 'Firebase', icon: '🔥', color: '#FFCA28' },
-            { name: 'Supabase', icon: '🌿', color: '#3ECF8E' },
-            { name: 'Node.js', icon: '🟢', color: '#68A063' },
-            { name: 'GraphQL', icon: '🔗', color: '#E10098' },
+            { name: 'Firebase', color: '#FFCA28', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg' },
+            { name: 'Supabase', color: '#3ECF8E', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg' },
+            { name: 'Node.js', color: '#68A063', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg' },
+            { name: 'GraphQL', color: '#E10098', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg' },
         ],
     },
     {
         label: 'Tools & DevOps',
         items: [
-            { name: 'Git', icon: '🌿', color: '#F05032' },
-            { name: 'Fastlane', icon: '🚀', color: '#00B0D8' },
-            { name: 'Figma', icon: '🎨', color: '#A259FF' },
-            { name: 'VS Code', icon: '💙', color: '#007ACC' },
+            { name: 'Git', color: '#F05032', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg' },
+            { name: 'Figma', color: '#A259FF', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg' },
+            { name: 'VS Code', color: '#007ACC', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg' },
+            { name: 'GitHub', color: '#333333', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg' },
         ],
     },
     {
         label: 'Web',
         items: [
-            { name: 'React JS', icon: '⚛️', color: '#61DAFB' },
-            { name: 'TypeScript', icon: '🔷', color: '#3178C6' },
-            { name: 'Tailwind', icon: '💨', color: '#38BDF8' },
-            { name: 'Vite', icon: '⚡', color: '#646CFF' },
+            { name: 'React JS', color: '#61DAFB', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg' },
+            { name: 'TypeScript', color: '#3178C6', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg' },
+            { name: 'Tailwind', color: '#38BDF8', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg' },
+            { name: 'Vite', color: '#646CFF', icon: 'https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg' },
         ],
     },
 ];
@@ -114,16 +114,27 @@ export default function TechStack() {
                                             e.currentTarget.style.boxShadow = '';
                                         }}
                                     >
+                                        {/* Icon */}
                                         <div
-                                            className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl"
+                                            className="w-12 h-12 rounded-xl flex items-center justify-center p-2"
                                             style={{
                                                 background: `${color}12`,
                                                 border: `1px solid ${color}20`,
                                             }}
                                         >
-                                            {icon}
+                                            <img
+                                                src={icon}
+                                                alt={`${name} logo`}
+                                                className="w-full h-full object-contain"
+                                                loading="lazy"
+                                                onError={(e) => {
+                                                    // Fallback: show first 2 letters of name
+                                                    e.target.style.display = 'none';
+                                                    e.target.parentElement.innerHTML = `<span style="font-size:1rem;font-weight:700;color:${color}">${name.slice(0, 2)}</span>`;
+                                                }}
+                                            />
                                         </div>
-                                        <span className="text-black/70 text-xs font-medium text-center leading-tight break-words max-w-[80px] text-wrap">
+                                        <span className="text-gray-700 text-xs font-medium text-center leading-tight break-words max-w-[80px] text-wrap">
                                             {name}
                                         </span>
                                     </div>
